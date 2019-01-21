@@ -8,24 +8,27 @@
     <title>Typpo</title>
   </head>
   <body>
-    <div id="container" class="container container--light">
+    <div id="container" class="container--light">
       <div class="header">
         <h1 id="heading" class="fade-in-right">Typpo</h1>
-        <div class="p-container">
-          <p>Hello, my name is Hippo Lim.</p>
-          <p>My dream is to become</p>
-          <p class="fastest-typer">the World 's Fastest Typer!</p>
-          <p>Can you please help me?</p>
-        </div>
+        <div class="p-container"></div>
         <img src="images/hippo-talk.png" alt="Typpo Hippo Talk" />
       </div>
 
-      <div class="input-container fade-in">
-        <h2>Type "<span>ready</span>" and hit "<span>enter</span>" to START your training!</h2>
-        <input type="text" id="input-start" />
+      <div class="input-container fade-in--9">
+        <h2 class="fade-in">
+          Type "<span class="highlight">ready</span>" and hit "<span
+            class="highlight"
+            >enter</span
+          >" to START your training!
+        </h2>
+        <input type="text" id="input-start" autofocus />
       </div>
     </div>
 
+    <script src="js/words.js"></script>
+    <script src="js/class.js"></script>
+    <script src="js/functions.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

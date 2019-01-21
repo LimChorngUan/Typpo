@@ -9,6 +9,7 @@ html {
   --dark-pink: #635050;
   --ligth-grey: #d8d8d8;
   --dark-grey: #5f5f5f;
+  --dark-brown: #a78c68;
 
   font-size: 62.5%;
 }
@@ -24,21 +25,37 @@ body {
   font-family: 'Kalam', cursive;
 }
 
+.highlight {
+  color: #fd7979;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* CANVAS */
+canvas {
+  /* border: 5px solid #ffdfdf; */
+  border-radius: 10px;
+
+}
+
 /* CONTAINER */
-.container {
+.container--light {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-
-.container--light {
   background-color: var(--light-pink);
 }
 
 .container--dark {
-  background-color: var(--dark-pink);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#474747
 }
 
 .header {
@@ -64,11 +81,6 @@ body {
   left: 255px;
 }
 
-.fastest-typer {
-  color: #fd7979;
-  font-weight: 700;
-}
-
 .input-container {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
@@ -79,18 +91,14 @@ body {
 .input-container h2 {
   font-size: 2.2rem;
   color: var(--text-pink);
-  letter-spacing: 0.05rem;
-  margin: 20px 0;
-}
-
-.input-container span {
-  color: #fd7979;
+  letter-spacing: 0.15rem;
+  margin: 25px 0;
 }
 
 .input-container input {
+  display: inline-block;
   font-family: 'Space Mono', monospace;
   font-size: 2.2rem;
-  display: inline-block;
   width: 250px;
   height: 50px;
   margin-bottom: 3rem;
@@ -98,22 +106,35 @@ body {
   letter-spacing: 0.2rem;
   color: var(--dark-grey);
   border: 3px solid #ff9c9c;
+  caret-color: #ff6161;
   border-radius: 15px;
   outline: none;
 }
 
-
-
 /* ANIMATIONS */
 .fade-in-right {
   animation-name: fade-in-right;
-  animation-duration: 0.6s;
+  animation-duration: 1s;
 }
 
-.fade-in {
+.fade-in--9 {
   animation: fade-in;
-  animation-duration: 0.5s;
-  animation-delay: 3s;
+  animation-duration: 0.6s;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+
+.fade-in--1 {
+  animation: fade-in;
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.fade-out {
+  animation: fade-out;
+  animation-duration: 0.8s;
+  animation-delay: 0.1s;
   animation-fill-mode: forwards;
 }
 
@@ -143,5 +164,14 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
