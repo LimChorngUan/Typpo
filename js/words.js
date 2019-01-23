@@ -4,16 +4,22 @@ var wordsEasy = [
   'array',
   'bit',
   'block',
+  'bug',
   'data',
+  'file',
   'git',
   'level',
   'line',
+  'scope',
   'shift',
-  'type'
+  'type',
+  
 ];
 
 var wordsMedium = [
   'argument',
+  'binary',
+  'bitwise',
   'pointer',
   'backend',
   'binary',

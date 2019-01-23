@@ -55,7 +55,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#474747
+  background-color:#fff;
 }
 
 .header {

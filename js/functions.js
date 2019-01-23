@@ -1,5 +1,5 @@
 /*****************************************
- * Typewritter effect
+ * Typewritter effect Animation
  *****************************************/
 // Make the words come out one by one
 // target: html element that will output the sentence
@@ -42,13 +42,51 @@ function hippoTalk() {
 }
 
 /*****************************************
- * Generate random words
+ * Hippo Typing Animation
  *****************************************/
-function randomIndex(wordsArray) {
-  return Math.floor(Math.random() * wordsArray.length);
+function hippoType() {
+  document.addEventListener('keydown', function() {
+    if (
+      hippo.status === 'left' ||
+      hippo.status === 'normal' ||
+      hippo.status === 'sad'
+    ) {
+      hippo.status = 'right';
+    } else if (hippo.status === 'right') {
+      hippo.status = 'left';
+    }
+  });
 }
 
-function generateWord(level) {
+/*****************************************
+ * Generate randomssssness
+ *****************************************/
+function randomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function randomPos() {
+  return Math.floor(Math.random() * 400) + 400;
+}
+
+function randomDifficulty() {
+  let levels = [
+    'easy',
+    'easy',
+    'easy',
+    'easy',
+    'easy',
+    'easy',
+    'medium',
+    'medium',
+    'medium',
+    'hard',
+    'hard'
+  ];
+  return levels[randomIndex(levels)];
+}
+
+function randomWord(level) {
   let randIndex;
 
   switch (level) {
@@ -62,4 +100,18 @@ function generateWord(level) {
       randIndex = randomIndex(wordsHard);
       return wordsHard[randIndex];
   }
+}
+
+/*****************************************
+ * Draw waste paper
+ *****************************************/
+// x is the position that the word box fall onto
+let wastePaper = new Image();
+wastePaper.src = '../images/waste-paper.png';
+
+function drawWaste() {
+  wastePapers.forEach(function(paper) {
+    let x = paper.x + paper.width / 2 - 35;
+    context.drawImage(wastePaper, x, 600, 70, 70);
+  });
 }
