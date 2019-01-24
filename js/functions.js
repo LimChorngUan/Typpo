@@ -178,10 +178,10 @@ function generateWords() {
     generateWord(wordSpeed);
   }, timeInterval);
 
-  if (gameLevel === 5) {
+  if (gameLevel >= 5) {
     level5IntervalId = setInterval(function() {
       generateWord(1);
-    }, 10000);
+    }, 30000);
   }
 }
 
@@ -322,14 +322,14 @@ function LevelUp() {
       break;
     case 5:
       console.log('lvl 5');
-      scoreToLevelUp = 700;
+      scoreToLevelUp = 550;
       wordSpeed = 1;
       timeInterval = 1000;
       break;
     case 6:
       console.log('lvl 6');
       scoreToLevelUp = 1500;
-      wordSpeed = 1;
+      wordSpeed = 2;
       timeInterval = 800;
       break;
     case 7:

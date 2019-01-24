@@ -32,6 +32,7 @@ var wordSpeed = 1;
 var timeInterval = 6000;
 var levelIntervalId = 0;
 var level5IntervalId = 0;
+var level6IntervalId = 0;
 
 // check status;
 var iceOrFire = 'ice';
@@ -158,6 +159,7 @@ function checkWords() {
           if (background.status !== 'ice') {
             progressBar.preLvlUp = scoreToLevelUp;
             gameLevel += 1;
+            progressBar.level = gameLevel;
             LevelUp();
             progressBar.toLvlUp = scoreToLevelUp;
             generateWords();
@@ -225,8 +227,8 @@ function checkReady() {
 //############################################################
 //############################################################
 
-// hippoTalk();
-// checkReady();
-container.classList.add('fade-out');
-canvasReady();
-gameStart();
+hippoTalk();
+checkReady();
+// container.classList.add('fade-out');
+// canvasReady();
+// gameStart();
