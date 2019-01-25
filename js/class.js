@@ -153,9 +153,13 @@ class Word {
   draw(context) {
     context.save();
 
+    // draw word box border
+    context.fillStyle = 'pink';
+    context.fillRect(this.x, this.y, this.width, this.height);
+
     // draw word box
     context.fillStyle = '#fff';
-    context.fillRect(this.x, this.y, this.width, this.height);
+    context.fillRect(this.x + 3, this.y + 3, this.width - 6, this.height - 6);
 
     // draw text
     context.font = '27px Space Mono';
@@ -190,9 +194,11 @@ class FireWord extends Word {
   draw(context) {
     context.save();
 
+    context.fillStyle = '#fff';
+    context.fillRect(this.x, this.y, this.width, this.height);
     // draw word box
     context.fillStyle = '#fd3d3d';
-    context.fillRect(this.x, this.y, this.width, this.height);
+    context.fillRect(this.x + 3, this.y + 3, this.width - 6, this.height - 6);
 
     // draw text
     context.font = '27px Space Mono';
@@ -255,9 +261,11 @@ class IceWord extends Word {
   draw(context) {
     context.save();
 
-    // draw word box
-    context.fillStyle = '#58DFFF';
+    context.fillStyle = '#fff';
     context.fillRect(this.x, this.y, this.width, this.height);
+
+    context.fillStyle = '#58DFFF';
+    context.fillRect(this.x + 3, this.y + 3, this.width - 6, this.height - 6);
 
     // draw text
     context.font = '27px Space Mono';
@@ -285,9 +293,11 @@ class GreenWord extends Word {
   draw(context) {
     context.save();
 
-    // draw word box
-    context.fillStyle = '#36D436';
+    context.fillStyle = '#fff';
     context.fillRect(this.x, this.y, this.width, this.height);
+
+    context.fillStyle = '#36D436';
+    context.fillRect(this.x + 3, this.y + 3, this.width - 6, this.height - 6);
 
     // draw text
     context.font = '27px Space Mono';
@@ -305,12 +315,12 @@ class GreenWord extends Word {
 class LevelUpImg {
   constructor() {
     this.img = new Image();
-    this.img.src = '../images/level-up.png';
+    this.img.src = '../images/levelUP.svg';
 
     this.x = 45;
-    this.y = 280;
+    this.y = 270;
 
-    this.status = 'hide';
+    this.status = 'hide'; 
     this.opacity = 0;
     this.speedY = -1;
   }
@@ -320,13 +330,13 @@ class LevelUpImg {
       if (this.opacity < 1) {
         this.opacity += 0.1;
       }
-      if (this.y > 230) {
+      if (this.y > 200) {
         this.y += this.speedY;
       }
     }
 
     if (this.status === 'hide') {
-      this.y = 280;
+      this.y = 270;
       this.opacity = 0;
     }
   }

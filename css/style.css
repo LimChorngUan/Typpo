@@ -237,7 +237,7 @@ body {
 }
 
 .btn-quit {
-  background-color: #ff6161;
+  background-color: #fd5f5f;
   transition-property: box-shadow, transform;
   transition-duration: 0.2s;
 }
