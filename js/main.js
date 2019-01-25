@@ -1,5 +1,3 @@
-
-
 var container = document.getElementById('container'); // outer container that contains everything
 var inputReady = document.getElementById('input-start');
 
@@ -223,11 +221,16 @@ function checkReady() {
   }, 9500);
 }
 
-window.onload = function () {
+
+setTimeout(function() {
   mainAudio.play();
   hippoTalk();
   checkReady();
-};
+}, 1000) 
+
+// window.onload = function () {
+  
+// };
 // container.classList.add('fade-out');
 // canvasReady();
 // gameStart();
