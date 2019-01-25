@@ -1,7 +1,5 @@
 var audio = new Audio('../audio/');
 
-
-
 var mainAudio = new Audio('../audio/background-music-1.mp3');
 mainAudio.volume = 0.4;
 mainAudio.loop = true;
@@ -17,20 +15,23 @@ var fireAudio = new Audio(
 );
 
 var levelUpAudio = new Audio('../audio/level-up.mp3');
-levelUpAudio.volume = 0.3;
+levelUpAudio.volume = 0.5;
 
 var wastepaperAudio = new Audio('../audio/waste-paper.mp3');
-wastepaperAudio.volume = 0.2;
+wastepaperAudio.volume = 0.8;
 
 var incorrectAudio = new Audio('../audio/incorrect.mp3');
-incorrectAudio.volume = 0.4;
+incorrectAudio.volume = 0.5;
 
 var correctAudio = new Audio('../audio/correct.mp3');
+correctAudio.volume = 0.5;
 
 var greenAudio = new Audio('../audio/green.mp3');
 
 var gameOverAudio = new Audio('../audio/game-over.mp3');
+
 var preGameOverAudio = new Audio('../audio/pre-game-over.mp3');
+preGameOverAudio.volume = 0.5;
 
 var clickAudio = new Audio('../audio/click.mp3');
 

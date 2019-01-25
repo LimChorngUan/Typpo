@@ -222,12 +222,12 @@ function checkReady() {
 }
 
 
-// window.onload = function() {
-//   mainAudio.play();
-//   hippoTalk();
-//   checkReady();
-// };;
-container.classList.add('fade-out');
-canvasReady();
-gameStart();
+window.onload = function() {
+  mainAudio.play();
+  hippoTalk();
+  checkReady();
+};;
+// container.classList.add('fade-out');
+// canvasReady();
+// gameStart();
 
