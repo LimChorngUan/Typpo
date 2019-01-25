@@ -261,3 +261,8 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 5px 6px rgba(44, 44, 44, 0.8);
 }
+
+.btn-container p {
+  color: #fff;
+  font-size: 2rem;
+}

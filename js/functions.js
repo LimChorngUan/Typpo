@@ -193,7 +193,7 @@ function generateElement() {
     words.length > 4 &&
     iceOrFire === 'ice' &&
     outputElement === true &&
-    gameLevel > 4
+    gameLevel >= 4
   ) {
     generateIce();
     outputElement = false;
@@ -208,7 +208,7 @@ function generateElement() {
     words.length > 4 &&
     iceOrFire === 'fire' &&
     outputElement === true &&
-    gameLevel > 4
+    gameLevel >= 4
   ) {
     generateFire();
     outputElement = false;
@@ -289,7 +289,7 @@ function ice() {
   setTimeout(function() {
     background.status = 'normal';
     hippo.status = 'normal';
-    wordSpeed = 1;
+    wordSpeed = 2;
     generateWords();
     words.forEach(function(word) {
       word.speedY = wordSpeed;
@@ -318,37 +318,37 @@ function LevelUp() {
       console.log('lvl 4');
       scoreToLevelUp = 250;
       wordSpeed = 1;
-      timeInterval = 1500;
+      timeInterval = 1200;
       break;
     case 5:
       console.log('lvl 5');
       scoreToLevelUp = 550;
-      wordSpeed = 1;
-      timeInterval = 1000;
+      wordSpeed = 2;
+      timeInterval = 2000;
       break;
     case 6:
       console.log('lvl 6');
       scoreToLevelUp = 1500;
       wordSpeed = 2;
-      timeInterval = 800;
+      timeInterval = 1500;
       break;
     case 7:
       console.log('lvl 7');
       scoreToLevelUp = 3000;
       wordSpeed = 2;
-      timeInterval = 2000;
+      timeInterval = 1000;
       break;
     case 8:
       console.log('lvl 8');
       scoreToLevelUp = 4500;
       wordSpeed = 2;
-      timeInterval = 1500;
+      timeInterval = 800;
       break;
     case 9:
       console.log('lvl 9');
       scoreToLevelUp = 7500;
       wordSpeed = 2;
-      timeInterval = 1000;
+      timeInterval = 500;
       break;
     case 10:
       console.log('lvl 10');
